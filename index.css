@@ -1,23 +1,76 @@
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 1000px;
+  height: 86px;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+.site-header {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 1;
+}
+.site-logo {
+  margin: 0;
+
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #1f2937;
+}
+
+.site-nav a {
+  margin-left: 42px;
+
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #1f2937;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Inter", sans-serif;
   font-size: 18px;
   line-height: 28px;
   color: #1f2937;
   margin: 0;
+  background-image: url("https://res.cloudinary.com/arnellebalane/image/upload/v1632525393/html-css-workshop/gradient-bg_gxrhv1.png");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-attachment: fixed;
 }
 
 .intro-section {
+  /* text-align: center; */
   max-width: 1000px;
   padding: 0px 24px;
   margin: 150px auto;
-
-  text-align: center;
+  display: flex;
+  align-items: center;
 }
+
+.intro-section img {
+  width: 250px;
+  height: 250px;
+  border: 8px solid #ede9fe;
+  border-radius: 50%;
+  margin-right: 50px;
+}
+
 /* Previously: h1 */
 .intro-section h1 {
-  font-size: 48px;
-  line-height: 58px;
+  text-align: left;
+  font-size: 40px;
+  line-height: 48px;
   color: #4b5563;
+  margin: 0;
 }
 
 /* Previously: h1 span */
@@ -93,10 +146,6 @@ article {
   background-color: #f9fafb;
 }
 
-h1 span {
-  display: block;
-  color: #7c3aed;
-}
 /* Previously: article */
 .work {
   padding: 32px 42px;
@@ -206,4 +255,159 @@ a {
 
 .email-button {
   text-decoration: none;
+}
+
+.banner-image {
+  height: 720px;
+  position: relative;
+  background-image: url("./images/Preview.png");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.social-links {
+  width: 32px;
+  padding: 8px;
+
+  background-color: #1f2937;
+}
+
+.social-links a {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 8px;
+
+  font-size: 0;
+
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+.social-links .facebook {
+  background-image: url("https://res.cloudinary.com/arnellebalane/image/upload/v1632525392/html-css-workshop/icon-facebook_xosefo.svg");
+}
+
+.social-links .twitter {
+  background-image: url("https://res.cloudinary.com/arnellebalane/image/upload/v1632525392/html-css-workshop/icon-twitter_ucgjyy.svg");
+}
+
+.social-links .instagram {
+  background-image: url("https://res.cloudinary.com/arnellebalane/image/upload/v1632525393/html-css-workshop/icon-instagram_jbaduh.svg");
+}
+
+.social-links {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+}
+.site-footer {
+  padding: 32px 24px;
+
+  text-align: center;
+  background-color: #f9fafb;
+}
+
+.site-footer p {
+  margin: 0;
+
+  color: #4b5563;
+}
+
+.site-logo:hover,
+.site-logo:focus {
+  color: #f59e0b;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  color: #f59e0b;
+}
+
+.section a:hover,
+.section a:focus {
+  color: #f59e0b;
+}
+
+.banner-attribution a:hover,
+.banner-attribution a:focus {
+  color: #f59e0b;
+}
+
+.contact-section .email-button:hover,
+.contact-section .email-button:focus {
+  color: #ffffff;
+  background-color: #f59e0b;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.about-section p:first-of-type {
+  margin-top: 0;
+}
+
+.about-section p:last-of-type {
+  margin-bottom: 0;
+}
+
+.work:last-child {
+  margin-bottom: 0;
+}
+
+.social-links a:last-child {
+  margin-bottom: 0;
+}
+
+.site-logo {
+  transition-property: color;
+  transition-duration: 200ms;
+}
+
+.site-nav a {
+  transition-property: color;
+  transition-duration: 200ms;
+}
+
+.banner-attribution a {
+  transition-property: color;
+  transition-duration: 200ms;
+}
+
+.section a {
+  transition-property: color;
+  transition-duration: 200ms;
+}
+
+.contact-section .email-button {
+  transition-property: background-color, color;
+  transition-duration: 200ms, 200ms;
+}
+
+.social-links a {
+  transition-property: background-color;
+  transition-duration: 200ms;
+}
+
+@keyframes change-colors {
+  0% {
+    color: #7c3aed;
+  }
+
+  50% {
+    color: #f59e0b;
+  }
+
+  100% {
+    color: #7c3aed;
+  }
+}
+
+.intro-section .highlight-name {
+  animation-name: change-colors;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
